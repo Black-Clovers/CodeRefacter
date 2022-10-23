@@ -15,7 +15,7 @@ public class EmployeeController {
 		bo.addEmployee();
 	}
 
-	public void loadAllEmployees() {
+	public void loadAllEmployees() throws Exception {
 		bo.loadAllEmployees();
 	}
 }

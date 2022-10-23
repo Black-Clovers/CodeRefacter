@@ -21,11 +21,10 @@ public class EmployeeBOImpl implements EmployeeBO {
 	@Override public boolean addEmployee() throws Exception {
 		for (int i = 0; i < employees.size(); i++) {
 			Employee employeeEn = employees.get(i);
-			boolean isAdded = dao.save(employeeEn);
-			if (!isAdded) {
-				return false;
-			}
+			return dao.save(employeeEn);
+
 		}
+		return false;
 	}
 
 	@Override public boolean deleteEmployee(String id) throws Exception {
@@ -33,11 +32,31 @@ public class EmployeeBOImpl implements EmployeeBO {
 	}
 
 	@Override public Employee searchEmployee(String id) throws Exception {
-		return null;
+		Employee searchEmployee = dao.getByID(id);
+		Employee employee = new Employee();
+		employee.setEmployeeID(searchEmployee.getEmployeeID());
+		employee.setFullName(searchEmployee.getFullName());
+		employee.setAddress(searchEmployee.getAddress());
+		employee.setDepartment(searchEmployee.getDepartment());
+		employee.setFacultyName(searchEmployee.getFacultyName());
+		employee.setDesignation(searchEmployee.getDesignation());
+		return employee;
 	}
 
 	@Override public ArrayList<Employee> getAllCustomers() throws Exception {
-		return null;
+		ArrayList<Employee> allEmployee = new ArrayList<>();
+		ArrayList<Employee> all = (ArrayList<Employee>) dao.getAll();
+		for (Employee a : all) {
+			Employee employee = new Employee();
+			employee.setEmployeeID(a.getEmployeeID());
+			employee.setFullName(a.getFullName());
+			employee.setAddress(a.getAddress());
+			employee.setFacultyName(a.getFacultyName());
+			employee.setDepartment(a.getDepartment());
+			employee.setDesignation(a.getDesignation());
+			allEmployee.add(employee);
+		}
+		return allEmployee;
 	}
 
 	@Override public void loadAllEmployees() throws Exception {
