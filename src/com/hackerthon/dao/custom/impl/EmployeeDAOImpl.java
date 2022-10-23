@@ -2,8 +2,10 @@ package com.hackerthon.dao.custom.impl;
 
 import com.hackerthon.dao.CrudUtil;
 import com.hackerthon.dao.custom.EmployeeDAO;
+import com.hackerthon.db.DBConnection;
 import com.hackerthon.entity.Employee;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +34,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		CrudUtil.executeUpdate(CrudUtil.getEmployeeQueryById("q1"));
 	}
 
-	@Override public boolean save(Employee employee) throws Exception {
-		return CrudUtil.executeUpdate(CrudUtil.getEmployeeQueryById("q3"), employee.getEmployeeID(),
-				employee.getFullName(), employee.getAddress(), employee.getFacultyName(), employee.getDepartment(),
-				employee.getDesignation());
+	@Override public void save(Employee employee) throws Exception {
+		PreparedStatement ps = CrudUtil.getPreparedStatement(CrudUtil.getEmployeeQueryById("q3"),
+				employee.getEmployeeID(), employee.getFullName(), employee.getAddress(), employee.getFacultyName(),
+				employee.getDepartment(), employee.getDesignation());
+		DBConnection.getInstance().getConnection().setAutoCommit(false);
+		ps.addBatch();
+		ps.executeBatch();
+		DBConnection.getInstance().getConnection().commit();
 	}
 
 	@Override public boolean update(Employee employee) throws Exception {

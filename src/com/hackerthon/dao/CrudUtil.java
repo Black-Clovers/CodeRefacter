@@ -15,7 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CrudUtil {
-	private static PreparedStatement getPreparedStatement(String sql, Object... data)
+	public static PreparedStatement getPreparedStatement(String sql, Object... data)
 			throws ClassNotFoundException, SQLException, IOException {
 		Connection connection = DBConnection.getInstance().getConnection();
 		PreparedStatement pstm = connection.prepareStatement(sql);

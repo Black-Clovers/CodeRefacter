@@ -18,13 +18,11 @@ public class EmployeeBOImpl implements EmployeeBO {
 		dao.createTable();
 	}
 
-	@Override public boolean addEmployee() throws Exception {
+	@Override public void addEmployee() throws Exception {
 		for (int i = 0; i < employees.size(); i++) {
 			Employee employeeEn = employees.get(i);
-			return dao.save(employeeEn);
-
+			dao.save(employeeEn);
 		}
-		return false;
 	}
 
 	@Override public boolean deleteEmployee(String id) throws Exception {

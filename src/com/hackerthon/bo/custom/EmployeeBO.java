@@ -6,7 +6,7 @@ import com.hackerthon.entity.Employee;
 import java.util.ArrayList;
 
 public interface EmployeeBO extends SuperBO {
-	boolean addEmployee() throws Exception;
+	void addEmployee() throws Exception;
 
 	boolean deleteEmployee(String id) throws Exception;
 
