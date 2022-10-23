@@ -1,7 +1,7 @@
-package dao.custom.impl;
+package emp.dao.custom.impl;
 
-import dao.custom.EmloyeeDAO;
-import entity.Employee;
+import emp.dao.custom.EmloyeeDAO;
+import emp.entity.Employee;
 
 import java.util.ArrayList;
 import java.util.List;

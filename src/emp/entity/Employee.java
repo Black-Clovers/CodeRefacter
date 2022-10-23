@@ -1,4 +1,4 @@
-package entity;
+package emp.entity;
 
 public class Employee {
 	private String employeeID;

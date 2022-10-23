@@ -1,6 +1,6 @@
-package dao;
+package emp.dao;
 
-import db.DBConnection;
+import emp.db.DBConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

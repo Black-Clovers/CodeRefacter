@@ -1,6 +1,6 @@
-package bo;
+package emp.bo;
 
-import entity.Employee;
+import emp.entity.Employee;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

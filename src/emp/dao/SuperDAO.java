@@ -1,4 +1,4 @@
-package dao;
+package emp.dao;
 
 public interface SuperDAO {
 

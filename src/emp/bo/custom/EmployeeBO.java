@@ -1,6 +1,6 @@
-package bo.custom;
+package emp.bo.custom;
 
-import bo.SuperBO;
+import emp.bo.SuperBO;
 
 public interface EmployeeBO extends SuperBO {
 }

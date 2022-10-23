@@ -1,4 +1,4 @@
-package dao;
+package emp.dao;
 
 public interface CrudDAO<T, ID> extends SuperDAO {
 	public boolean save(T t) throws Exception;

@@ -1,4 +1,4 @@
-import entity.Employee;
+import emp.entity.Employee;
 
 import java.sql.*;
 import java.util.ArrayList;

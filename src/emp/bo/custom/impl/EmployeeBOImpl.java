@@ -1,7 +1,7 @@
-package bo.custom.impl;
+package emp.bo.custom.impl;
 
-import bo.custom.EmployeeBO;
-import entity.Employee;
+import emp.bo.custom.EmployeeBO;
+import emp.entity.Employee;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
