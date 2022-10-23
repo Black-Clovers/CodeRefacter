@@ -13,7 +13,7 @@
          <![CDATA[select * from employees where employees.EmployeeID = ?]]>
 	</query>
 	<query id="q5">
-         <![CDATA[ select * from employees]]>
+         <![CDATA[ select * from employees ]]>
 	</query>
 	<query id="q6">
          <![CDATA[ delete from employees where employees.EmployeeID = ?]]>

@@ -10,8 +10,8 @@ import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-	@Override public void getEmployeeOutPut() throws Exception {
-		ArrayList<Employee> employeeList = (ArrayList<Employee>) getAll();
+	@Override public void getEmployeeOutPut(ArrayList<Employee> employeeList) throws Exception {
+
 		System.out.println("Employee ID" + "\t\t" + "Full Name" + "\t\t" + "Address" + "\t\t" + "Faculty Name" + "\t\t"
 				+ "Department" + "\t\t" + "Designation" + "\n");
 		System.out.println(
@@ -28,8 +28,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override public void createTable() throws Exception {
-		CrudUtil.executeUpdate(CrudUtil.getEmployeeQueryById("q1"));
 		CrudUtil.executeUpdate(CrudUtil.getEmployeeQueryById("q2"));
+		CrudUtil.executeUpdate(CrudUtil.getEmployeeQueryById("q1"));
 	}
 
 	@Override public boolean save(Employee employee) throws Exception {
@@ -64,7 +64,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override public List<Employee> getAll() throws Exception {
-		ResultSet rst = CrudUtil.executeQuery("SELECT * FROM customer");
+		ResultSet rst = CrudUtil.executeQuery(CrudUtil.getEmployeeQueryById("q5"));
 		ArrayList<Employee> allEmployees = new ArrayList<>();
 		while (rst.next()) {
 			Employee employee = new Employee();
@@ -76,6 +76,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			employee.setDesignation(rst.getString(6));
 			allEmployees.add(employee);
 		}
+		getEmployeeOutPut(allEmployees);
 		return allEmployees;
 	}
 

@@ -12,7 +12,7 @@ public interface EmployeeBO extends SuperBO {
 
 	Employee searchEmployee(String id) throws Exception;
 
-	ArrayList<Employee> getAllCustomers() throws Exception;
+	ArrayList<Employee> getAllEmployee() throws Exception;
 
 	void loadAllEmployees() throws Exception;
 

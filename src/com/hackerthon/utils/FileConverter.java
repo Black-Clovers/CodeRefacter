@@ -23,15 +23,16 @@ public class FileConverter {
 	private static Map<String, String> m = null;
 
 	public static void getRequestTransform() throws Exception {
-		Source x = new StreamSource(new File("src/e/EmployeeRequest.xml"));
-		Source s = new StreamSource(new File("src/e/Employee-modified.xsl"));
-		Result o = new StreamResult(new File("src/e/EmployeeResponse.xml"));
+		Source x = new StreamSource(new File("src/com/hackerthon/utils/EmployeeRequest.xml"));
+		Source s = new StreamSource(new File("src/com/hackerthon/utils/Employee-modified.xsl"));
+		Result o = new StreamResult(new File("src/com/hackerthon/utils/EmployeeResponse.xml"));
 		TransformerFactory.newInstance().newTransformer(s).transform(x, o);
 	}
 
 	public static ArrayList<Map<String, String>> getXmlXPaths() throws Exception {
 
-		Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse("src/e/EmployeeResponse.xml");
+		Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+				.parse("src/com/hackerthon/utils/EmployeeResponse.xml");
 		XPath x = XPathFactory.newInstance().newXPath();
 		int n = Integer.parseInt((String) x.compile("count(//Employees/Employee)").evaluate(d, XPathConstants.STRING));
 		for (int i = 1; i <= n; i++) {

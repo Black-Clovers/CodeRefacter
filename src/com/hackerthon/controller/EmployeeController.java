@@ -18,4 +18,8 @@ public class EmployeeController {
 	public void loadAllEmployees() throws Exception {
 		bo.loadAllEmployees();
 	}
+
+	public void getAllEmployees() throws Exception {
+		bo.getAllEmployee();
+	}
 }

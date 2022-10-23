@@ -3,6 +3,8 @@ package com.hackerthon.dao.custom;
 import com.hackerthon.dao.CrudDAO;
 import com.hackerthon.entity.Employee;
 
+import java.util.ArrayList;
+
 public interface EmployeeDAO extends CrudDAO<Employee, String> {
-	void getEmployeeOutPut() throws Exception;
+	void getEmployeeOutPut(ArrayList<Employee> employeeList) throws Exception;
 }

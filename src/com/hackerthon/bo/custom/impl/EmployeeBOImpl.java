@@ -43,7 +43,7 @@ public class EmployeeBOImpl implements EmployeeBO {
 		return employee;
 	}
 
-	@Override public ArrayList<Employee> getAllCustomers() throws Exception {
+	@Override public ArrayList<Employee> getAllEmployee() throws Exception {
 		ArrayList<Employee> allEmployee = new ArrayList<>();
 		ArrayList<Employee> all = (ArrayList<Employee>) dao.getAll();
 		for (Employee a : all) {
