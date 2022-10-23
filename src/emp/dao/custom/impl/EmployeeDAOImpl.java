@@ -6,7 +6,7 @@ import emp.entity.Employee;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeImpl implements EmloyeeDAO {
+public class EmployeeDAOImpl implements EmloyeeDAO {
 	@Override public boolean save(Employee employee) throws Exception {
 		return false;
 	}
