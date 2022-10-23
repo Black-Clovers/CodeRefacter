@@ -1,7 +1,7 @@
-package emp.dao.custom.impl;
+package com.hackerthon.dao.custom.impl;
 
-import emp.dao.custom.EmloyeeDAO;
-import emp.entity.Employee;
+import com.hackerthon.dao.custom.EmloyeeDAO;
+import com.hackerthon.entity.Employee;
 
 import java.util.ArrayList;
 import java.util.List;

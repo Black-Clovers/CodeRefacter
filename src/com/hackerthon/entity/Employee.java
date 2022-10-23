@@ -1,4 +1,4 @@
-package emp.entity;
+package com.hackerthon.entity;
 
 public class Employee {
 	private String employeeID;

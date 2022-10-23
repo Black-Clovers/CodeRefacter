@@ -1,6 +1,6 @@
-package emp.dao;
+package com.hackerthon.dao;
 
-import emp.db.DBConnection;
+import com.hackerthon.db.DBConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package emp.dao;
+package com.hackerthon.dao;
 
 public interface SuperDAO {
 

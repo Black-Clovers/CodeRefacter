@@ -1,6 +1,6 @@
-package emp.bo;
+package com.hackerthon.bo;
 
-import emp.bo.custom.impl.EmployeeBOImpl;
+import com.hackerthon.bo.custom.impl.EmployeeBOImpl;
 
 public class BOFactory {
 
@@ -26,4 +26,5 @@ public class BOFactory {
 	public enum BOType {
 		EMPLOYEE
 	}
+
 }

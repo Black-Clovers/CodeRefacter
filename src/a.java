@@ -1,4 +1,4 @@
-import emp.entity.Employee;
+import com.hackerthon.entity.Employee;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -36,13 +36,14 @@ public class a extends c1 {
 				EMPLOYEE.dEPARTMENT(l.get("XpathDepartmentKey"));
 				EMPLOYEE.dESIGNATION(l.get("XpathDesignationKey"));
 				el.add(EMPLOYEE);
-				System.out.println(EMPLOYEE.toString() + "\n");
+				System.out.println(EMPLOYEE + "\n");
 			}
 		} catch (Exception e) {
 		}
 	}
 
 	public void a3() {
+		//		create emp tables
 		try {
 			s = c.createStatement();
 			s.executeUpdate(c2.Q("q2"));
@@ -52,6 +53,7 @@ public class a extends c1 {
 	}
 
 	public void a4() {
+		//insert new emp
 		try {
 			ps = c.prepareStatement(c2.Q("q3"));
 			c.setAutoCommit(false);
@@ -72,7 +74,7 @@ public class a extends c1 {
 	}
 
 	public void eMPLOYEEGETBYID(String eid) {
-
+		//seach by id
 		Employee e = new Employee();
 		try {
 			ps = c.prepareStatement(c2.Q("q4"));
@@ -95,6 +97,7 @@ public class a extends c1 {
 
 	public void EMPLOYEEDELETE(String eid) {
 
+		//delete byID
 		try {
 			ps = c.prepareStatement(c2.Q("q6"));
 			ps.setString(1, eid);
@@ -105,6 +108,8 @@ public class a extends c1 {
 	}
 
 	public void a5() {
+
+		//Select * emp
 
 		ArrayList<Employee> l = new ArrayList<Employee>();
 		try {

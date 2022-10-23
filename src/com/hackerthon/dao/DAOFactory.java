@@ -1,6 +1,6 @@
-package emp.dao;
+package com.hackerthon.dao;
 
-import emp.dao.custom.impl.EmployeeDAOImpl;
+import com.hackerthon.dao.custom.impl.EmployeeDAOImpl;
 
 public class DAOFactory {
 
