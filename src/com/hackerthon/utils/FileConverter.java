@@ -27,11 +27,11 @@ public class FileConverter {
 	public static void getRequestTransform()
 			throws Exception { //create method to transform the xml file and throw exception
 		// get EmployeeRequest.xml file
-		Source employeeRequest = new StreamSource(new File("src/com/hackerthon/utils/EmployeeRequest.xml"));
+		Source employeeRequest = new StreamSource(new File("src/com/hackerthon/config/EmployeeRequest.xml"));
 		// get Employee-modified.xsl file
-		Source employeeModified = new StreamSource(new File("src/com/hackerthon/utils/Employee-modified.xsl"));
+		Source employeeModified = new StreamSource(new File("src/com/hackerthon/config/Employee-modified.xsl"));
 		// get EmployeeResponse.xml file
-		Result employeeResponse = new StreamResult(new File("src/com/hackerthon/utils/EmployeeResponse.xml"));
+		Result employeeResponse = new StreamResult(new File("src/com/hackerthon/config/EmployeeResponse.xml"));
 		// create TransformerFactory instance and transform
 		TransformerFactory.newInstance().newTransformer(employeeModified).transform(employeeRequest, employeeResponse);
 	}
@@ -41,7 +41,7 @@ public class FileConverter {
 
 		//create DocumentBuilderFactory instance and parse the xml file
 		Document d = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-				.parse("src/com/hackerthon/utils/EmployeeResponse.xml");
+				.parse("src/com/hackerthon/config/EmployeeResponse.xml");
 
 		//create XPathFactory instance and create new XPath
 		XPath xPath = XPathFactory.newInstance().newXPath();

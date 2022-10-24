@@ -40,7 +40,7 @@ public class CrudUtil {
 		NodeList nodeList;
 		Element element = null;
 		nodeList = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-				.parse(new File("src/com/hackerthon/utils/EmployeeQuery.xml")).getElementsByTagName("query");
+				.parse(new File("src/com/hackerthon/config/EmployeeQuery.xml")).getElementsByTagName("query");
 		for (int x = 0; x < nodeList.getLength(); x++) {
 			element = (Element) nodeList.item(x);
 			if (element.getAttribute("id").equals(id))
