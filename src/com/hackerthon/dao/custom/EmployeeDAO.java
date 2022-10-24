@@ -5,6 +5,8 @@ import com.hackerthon.entity.Employee;
 
 import java.util.ArrayList;
 
-public interface EmployeeDAO extends CrudDAO<Employee, String> {
-	void getEmployeeOutPut(ArrayList<Employee> employeeList) throws Exception;
+public interface EmployeeDAO extends CrudDAO<Employee, String> {// create the interface class to implement the methods
+
+	void getEmployeeOutPut(ArrayList<Employee> employeeList)
+			throws Exception;// This method is used to get the employee output
 }
