@@ -23,10 +23,13 @@ public class FileConverter {
 	private static Map<String, String> m = null;
 
 	public static void getRequestTransform() throws Exception {
-		Source x = new StreamSource(new File("src/com/hackerthon/utils/EmployeeRequest.xml"));
-		Source s = new StreamSource(new File("src/com/hackerthon/utils/Employee-modified.xsl"));
-		Result o = new StreamResult(new File("src/com/hackerthon/utils/EmployeeResponse.xml"));
-		TransformerFactory.newInstance().newTransformer(s).transform(x, o);
+		// get EmployeeRequest.xml file
+		Source employeeRequest = new StreamSource(new File("src/com/hackerthon/utils/EmployeeRequest.xml"));
+		// get Employee-modified.xsl file
+		Source employeeModified = new StreamSource(new File("src/com/hackerthon/utils/Employee-modified.xsl"));
+		// get EmployeeResponse.xml file
+		Result employeeResponse = new StreamResult(new File("src/com/hackerthon/utils/EmployeeResponse.xml"));
+		TransformerFactory.newInstance().newTransformer(employeeModified).transform(employeeRequest, employeeResponse);
 	}
 
 	public static ArrayList<Map<String, String>> getXmlXPaths() throws Exception {
