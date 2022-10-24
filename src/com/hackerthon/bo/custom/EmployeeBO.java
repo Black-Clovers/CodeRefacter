@@ -5,15 +5,16 @@ import com.hackerthon.entity.Employee;
 
 import java.util.ArrayList;
 
-public interface EmployeeBO extends SuperBO {
-	void addEmployee() throws Exception;
+public interface EmployeeBO extends SuperBO { // create the interface class to implement the methods
+	void addEmployee() throws Exception;// This method is used to add the employee to the database
 
-	boolean deleteEmployee(String id) throws Exception;
+	boolean deleteEmployee(String id) throws Exception;// This method is used to delete the employee from the database
 
-	Employee searchEmployee(String id) throws Exception;
+	Employee searchEmployee(String id) throws Exception;// This method is used to search the employee from the database
 
-	ArrayList<Employee> getAllEmployee() throws Exception;
+	ArrayList<Employee> getAllEmployee()
+			throws Exception;// This method is used to get all the employee from the database
 
-	void loadAllEmployees() throws Exception;
+	void loadAllEmployees() throws Exception;// This method is used to load all the employee
 
 }
