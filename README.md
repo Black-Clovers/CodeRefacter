@@ -9,7 +9,7 @@
 
 ## 🌱 Contributors </br>
 
-<a href="https://github.com/MadhushaPrasad/CodeRefacter/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MadhushaPrasad/CodeRefacter" />
+<a href="https://github.com/Black-Clovers/CodeRefacter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Black-Clovers/CodeRefacter" />
 </a>
 </br>
